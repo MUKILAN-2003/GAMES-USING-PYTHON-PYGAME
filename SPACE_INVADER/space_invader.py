@@ -165,6 +165,7 @@ while intro:
                     if event.key == pg.K_SPACE:
                         for i in enemy_num:
                             i.earth_life = 100
+                            i.enemyship_vel = 2
                         enemy1.enemyship_y = -50    
                         score = 0    
                         restart = False
