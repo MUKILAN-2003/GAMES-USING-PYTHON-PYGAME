@@ -1,6 +1,7 @@
 import pygame as pg
 import random
 pg.init()
+boom = pg.mixer.Sound("sounds/boom.wav")
 
 class Battleship(object):
     ship = pg.image.load('images/battleship.png')
@@ -42,6 +43,7 @@ class Enemyship(object):
         pg.display.update()
 
         if self.enemyship_y > 450:
+            boom.play()
             self.enemyship_x = random.randint(0,480)
             self.enemyship_y = -50
             self.earth_life -= 50
